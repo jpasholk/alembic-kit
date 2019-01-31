@@ -1,9 +1,9 @@
 ---
-title: Welcome to my website
+title: ShortCasts
 layout: page
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-  ## Hello world
+  ## Your iOS Shortcuts Podcast
 ---
 
-There isn't much going on here yet, but watch this space
+We've working on something, and we think you're going to love it.
