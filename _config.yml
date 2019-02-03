@@ -19,12 +19,12 @@ plugins:
 - jemoji
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'https://shortcasts.netlify.com'
 baseurl: ''
 title: 'ShortCasts'
 description: 'Your iOS Shortcuts Podcast'
 permalink: pretty
-# logo: ""
+logo: "/assets/img/logo.png"
 
 # Pagination
 paginate: 5
@@ -35,6 +35,7 @@ navigation_header:
   Home: /
   About: /about/
   Blog: /blog/
+  Episodes: /episodes/
 
 # Footer nav
 navigation_footer:
@@ -49,3 +50,9 @@ collections:
     feature_text: |
       Welcome to my blog
     feature_image: "https://picsum.photos/2560/600?image=866"
+  episodes:
+    title: Episodes
+    output: true
+    description: "Listen to the latest from the ShortCasts team!"
+    featured_text: |
+      Latest Episodes

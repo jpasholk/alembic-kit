@@ -6,4 +6,6 @@ feature_text: |
   ## Your iOS Shortcuts Podcast
 ---
 
-We've working on something, and we think you're going to love it.
+We've been working on something, and we think you're going to love it.
+
+### Eta son&trade;

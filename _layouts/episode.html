@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+
+  <div class="content">
+
+    <article class="article  article--page  typeset">
+
+      <h1>Episodes</h1>
+
+        <ul>
+          {% for episode in site.episodes %}
+            <li>
+              <h2>{{ episode.name }}</h2>
+              <h3>{{ episode.position }}</h3>
+              <p>{{ episode.content | markdownify }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+
+    </article>
+
+  </div>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
