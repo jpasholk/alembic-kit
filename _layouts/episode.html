@@ -12,11 +12,13 @@ layout: default
 
       <h1>Episodes</h1>
 
-        <ul>
-          {% for episode in site.episodes %}
-            <li>
-              <h2>{{ episode.name }}</h2>
-              <h3>{{ episode.position }}</h3>
+        <ul class="list  list--posts">
+          {% for episode in site.episodes reversed %}
+            <li class="item  item--post">
+              <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
+              <small class="small  post-meta">
+                <time datetime="{{ episode.date | date_to_xmlschema }}" class="time">{{ episode.date | date_to_string }}</time>
+              </small>
               <p>{{ episode.content | markdownify }}</p>
             </li>
           {% endfor %}

@@ -1,9 +1,7 @@
 ---
-layout: post
-title: Test Episode
-categories:
-- Podcast
+title: Episode One
+date: "2019-02-04 09:38:53 -0800"
 feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
-Testing tested test.
+Episode One, ftw.

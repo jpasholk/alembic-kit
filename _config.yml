@@ -49,10 +49,18 @@ collections:
     description: "My thoughts and ideas"
     feature_text: |
       Welcome to my blog
-    feature_image: "https://picsum.photos/2560/600?image=866"
+    # feature_image: "https://picsum.photos/2560/600?image=866"
   episodes:
     title: Episodes
     output: true
     description: "Listen to the latest from the ShortCasts team!"
     featured_text: |
       Latest Episodes
+
+defaults:
+  - scope:
+      path: ""
+      type: "episodes"
+    values:
+      layout: "post"
+  
