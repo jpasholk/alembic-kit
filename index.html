@@ -1,0 +1,16 @@
+---
+title: ShortCasts
+layout: page
+---
+
+<ul class="list  list--posts">
+    {% for episode in site.episodes reversed limit:1 %}
+      <li class="item  item--post">
+        <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
+        <small class="small  post-meta">
+          <time datetime="{{ episode.date | date_to_xmlschema }}" class="time">{{ episode.date | date_to_string }}</time>
+        </small>
+        <p>{{ episode.content | markdownify }}</p>
+      </li>
+    {% endfor %}
+</ul>

@@ -6,27 +6,21 @@ layout: default
 
 <main class="main  container">
 
-  <div class="content">
+  <article class="article  article--post  content  typeset">
 
-    <article class="article  article--page  typeset">
+    <h1>{{ page.title }}</h1>
 
-      <h1>Episodes</h1>
+    <small class="small  post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time>
+    </small>
 
-        <ul class="list  list--posts">
-          {% for episode in site.episodes reversed %}
-            <li class="item  item--post">
-              <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
-              <small class="small  post-meta">
-                <time datetime="{{ episode.date | date_to_xmlschema }}" class="time">{{ episode.date | date_to_string }}</time>
-              </small>
-              <p>{{ episode.content | markdownify }}</p>
-            </li>
-          {% endfor %}
-        </ul>
+    {{ content }}
 
-    </article>
+    {% include nav-share.html %}
 
-  </div>
+    {% include post-comments.html %}
+
+  </article>
 
   {% if page.aside == true %}{% include site-aside.html %}{% endif %}
 

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+
+  <div class="content">
+
+    <article class="article  article--page  typeset">
+
+      <h1>Episodes</h1>
+
+        <ul class="list  list--posts">
+          {% for episode in site.episodes reversed %}
+            <li class="item  item--post">
+              <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
+              <small class="small  post-meta">
+                <time datetime="{{ episode.date | date_to_xmlschema }}" class="time">{{ episode.date | date_to_string }}</time>
+              </small>
+              <p>{{ episode.content | markdownify }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+
+    </article>
+
+  </div>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}

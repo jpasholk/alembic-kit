@@ -56,5 +56,5 @@ defaults:
       path: ""
       type: "episodes"
     values:
-      layout: "post"
+      layout: "episode"
   
